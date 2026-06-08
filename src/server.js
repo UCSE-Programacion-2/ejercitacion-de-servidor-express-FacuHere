@@ -31,6 +31,7 @@ app.get('/productos', (req, res) => {
     return res.json(productosFiltrados);
   }
 
+
   return res.json(productos);
 });
 
