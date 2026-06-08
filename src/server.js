@@ -28,23 +28,17 @@ app.get('/productos', (req, res) => {
     const productosFiltrados = productos.filter(
       producto => producto.categoria === categoria
     );
-
     return res.json(productosFiltrados);
   }
-
-
   return res.json(productos);
 });
 
 app.get('/usuarios/:id', (req, res) => {
   const id = Number(req.params.id);
-
   const usuario = usuarios.find(usuario => usuario.id === id);
-
   if (!usuario) {
     return res.status(404).send('Usuario no encontrado.');
   }
-
   return res.json(usuario);
 });
 
